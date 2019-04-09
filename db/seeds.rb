@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# @radiohead = Artist.create(name: 'Radiohead')
+@radiohead = Artist.find_by(name: 'Radiohead')
+@karma_police = Song.create(title: 'Karma Police')
+@disappear = Song.create(title: 'How to Disappear Completely')
+
+@radiohead.songs << @karma_police
+@radiohead.songs << @disappear
